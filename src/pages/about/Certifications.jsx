@@ -1,7 +1,10 @@
 import React from 'react';
 
-import ScrumFoundation from '../../assets/images/certificados/scrum_foundation.webp';
-import ProgramacionWebFullStack from '../../assets/images/certificados/Web_Full_Stack.webp';
+import ScrumFoundation from '../../assets/images/certificados/scrumfoundation.webp';
+import ProgramacionWebFullStack from '../../assets/images/certificados/WebFullStack.webp';
+import CloudComputing from '../../assets/images/certificados/CloudComputing.webp';
+import CienciaDeDatos1 from '../../assets/images/certificados/CienciaDeDatos1.webp';
+import CienciaDeDatos2 from '../../assets/images/certificados/CienciaDeDatos2.webp';
 
 const certifications = [
     {
@@ -22,32 +25,52 @@ const certifications = [
         image: require('../../assets/images/svg/linkedin.svg'),
     },
     {
-        title: 'Scrum Foundation Professional Certification (SFPC)',
+        title: 'Scrum Foundation Professional Certification - SFPC™ !',
         description: [
             'CertiProf',
-            '2024',
+            'Enero 2024',
         ],
         image: ScrumFoundation,
         link: 'https://www.credly.com/badges/8426fb23-54f7-4f39-ba83-e7d44247844f/linked_in_profile',
     },
     {
-        title: 'Ciencia de Datos 1 y 2',
-        description: [
-            'UNI PIT',
-            '2023',
-        ],
-        image: require('../../assets/images/svg/gmail.svg'),
-        link: '',
-    },
-    {
-        title: 'Cloud Computing (AWS, Azure, Google Cloud)',
+        title: 'CLOUD COMPUTING: AWS - AZURE -GOOGLE CLOUD',
         description: [
             'UNI PIT',
             'Junio 2024',
         ],
-        image: require('../../assets/images/svg/gmail.svg'),
+        image: CloudComputing,
         link: 'https://certificados.uni.edu.pe/verificador/search.php?cert_id=cert_34150a3f9cdb22fd29209c3bd60d2493&action=view',
     },
+    {
+        title: 'CIENCIA DE DATOS 1 ',
+        description: [
+            'UNI PIT',
+            'Junio 2024',
+        ],
+        image: CienciaDeDatos1,
+        link: 'https://certificados.uni.edu.pe/verificador/search.php?cert_id=cert_31d9bfcd70f9f220cf6d951b397d6474',
+    },
+    {
+        title: 'CIENCIA DE DATOS 2',
+        description: [
+            'UNI PIT',
+            'Junio 2024',
+        ],
+        image: CienciaDeDatos2,
+        link: 'https://certificados.uni.edu.pe/verificador/search.php?cert_id=cert_943f7002a7a930a0d53c25e06b909ac5&action=view',
+    },
+    {
+        title: 'POWER BI - Básico',
+        description: [
+            'UNI PIT',
+            'Junio 2024',
+        ],
+        image: CienciaDeDatos2,
+        link: 'https://certificados.uni.edu.pe/verificador/search.php?cert_id=cert_d6f3fd78bb3af97b033a0fbe2245d57e&action=view',
+    },
+    
+    
 ];
 
 function Certifications() {
