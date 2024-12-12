@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import fravaExperience from '../../assets/images/certificados/PasantiaFrava320h.webp';
 
+import Modal from '../../components/common/ModalImage';
+
 const experiences = [
   {
     year: '2024',
@@ -17,7 +19,17 @@ const experiences = [
     ],
     image: fravaExperience,
   },
+  {
+    year: 'Proximamente',
+    title: '',
+    company: '',
+    location: '',
+    duration: '',
+    description: [],
+    image: '',
+  }
 ];
+
 
 const Timeline = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -57,46 +69,27 @@ const Timeline = () => {
               </ul>
             </div>
             {/* Botón para abrir el modal */}
-            <div className="mt-4 md:mt-0">
-              <button
-                onClick={() => openModal(exp.image)}
-                className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-              >
-                Ver Certificado
-              </button>
-            </div>
+            {exp.image && (
+              <div className="mt-4 md:mt-0">
+                <button
+                  onClick={() => openModal(exp.image)}
+                  className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+                >
+                  Ver Certificado
+                </button>
+              </div>
+            )}
           </div>
         ))}
       </div>
-
-      {/* Modal */}
-      {isModalOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-          onClick={closeModal} // Cierra el modal al hacer clic fuera del contenido
-        >
-          <div
-            className="bg-white rounded-lg p-4 max-w-4xl w-full relative"
-            onClick={(e) => e.stopPropagation()} // Evita cerrar al hacer clic dentro del modal
-          >
-            {/* Botón de cierre */}
-            <button
-              onClick={closeModal}
-              className="text-gray-500 hover:text-gray-700 absolute top-4 right-4 text-2xl"
-            >
-              ✖
-            </button>
-            {/* Imagen en el modal */}
-            <div className="mt-4 flex justify-center">
-              <img
-                src={selectedImage}
-                alt="Certificado"
-                className="w-full h-auto max-h-[80vh] object-contain rounded"
-              />
-            </div>
-          </div>
-        </div>
-      )}
+      {/* Usando el Modal */}
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <img
+          src={selectedImage}
+          alt="Certificado"
+          className="w-full h-auto max-h-[80vh] object-contain rounded"
+        />
+      </Modal>
     </section>
   );
 };
