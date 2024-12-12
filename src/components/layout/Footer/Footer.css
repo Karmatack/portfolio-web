@@ -1,0 +1,16 @@
+/* Solo incluir reglas personalizadas si son necesarias */
+
+/* Ejemplo de regla para algún detalle que Tailwind no cubra directamente */
+.custom-link:hover {
+    text-decoration: underline;
+  }
+  
+  .custom-logo {
+    border-radius: 8px; /* Si necesitas bordes redondeados adicionales */
+  }
+  
+  /* Si deseas alguna sombra personalizada */
+  .custom-shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
